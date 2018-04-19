@@ -6,7 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 <body>
-		<h1>The AWS Platform Part1</h1><hr />
+		<h1>The AWS Platform - The 10,000 Foot Overview</h1><hr />
 <div>
 <table>
 	<tr>
@@ -79,7 +79,7 @@
 		<dt>Storage Gateway</dt>
 		<dd>Essentially virtual appliances you install in your datacenter or head office and then will replicate data back to S3. 4 Different types of Storage Gateway</dd>
 	</dl>
-	<h3>Database</h3>
+	<h2>Database</h2>
 	<dl>
 		<dt>RDS</dt>
 		<dd>Databases such as MySql, MSSQL, Postgres, Oracle</dd>
@@ -90,7 +90,7 @@
 		<dt>Red Shift</dt>
 		<dd>used for Data Warehousing or Business Intelligence</dd>
 	</dl>
-	<h3>Migration</h3>
+	<h2>Migration</h2>
 	<dl>
 		<dt>AWS Migration Hub</dt>
 		<dd>Tracking service as it tracks during migration</dd>
@@ -103,7 +103,7 @@
 		<dt>Snowball</dt>
 		<dd>migrates large amount of data using an appliance</dd>
 	</dl>
-	<h3>Network &amp; Content Delivery</h3>
+	<h2>Network &amp; Content Delivery</h2>
 	<dl>
 		<dt>VPC</dt>
 		<dd>Amazon's virtual private cloud</dd>
@@ -116,7 +116,7 @@
 		<dt>Direct Connect</dt>
 		<dd>Way of running a deicated line from datacenter to AWS</dd>
 	</dl>
-	<h3>Developer Tools (won't be on test)</h3>
+	<h2>Developer Tools (won't be on test)</h2>
 	<dl>
 		<dt>Codestar</dt>
 		<dd>collaboration on code</dd>
@@ -133,7 +133,7 @@
 		<dt>Cloud9</dt>
 		<dd>IDE</dd>
 	</dl>
-	<h3>Management Tools</h3>
+	<h2>Management Tools</h2>
 	<dl>
 		<dt>CloudWatch</dt>
 		<dd>Monitoring Service</dd>
@@ -154,7 +154,7 @@
 		<dt>Managed Services</dt>
 		<dd></dd>
 	</dl>
-	<h3>Media Services</h3>
+	<h2>Media Services</h2>
 	<dl>
 		<dt>Elastic Transcode (not on exam)</dt>
 		<dd>transcodes media to appropriate devices such as iphones, androids, etc</dd>
@@ -169,7 +169,7 @@
 		<dt>MediaTailor</dt>
 		<dd>allows you to do targeted advertisement</dd>
 	</dl>
-	<h3>Machine Learning (not on exam)</h3>
+	<h2>Machine Learning (not on exam)</h2>
 	<dl>
 		<dt>Sage Maker</dt>
 		<dd>fully managed machine learning service</dd>
@@ -190,14 +190,115 @@
 		<dt>Amazon Transcribe</dt>
 		<dd>automatice speech recognition</dd>
 	</dl>
-	<h3>Analytics</h3>
+	<h2>Analytics</h2>
 	<dl>
 		<dt>Athena</dt>
 		<dd>Allows you to run a sql-query on things in your S3 bucket</dd>
+		<dt>EMR - Elastic Map Reduce</dt>
+		<dd>Processing large amounts of data</dd>
+		<dt>CloudSearch/ElasticSearch Service</dt>
+		<dd>Search service</dd>
+		<dt>Kinesis</dt>
+		<dd>service that collects and process large streams of data records in real time</dd>
+		<dt>Kinesis Video Streams</dt>
+		<dd>service that collects and process large streams of video</dd>
+		<dt>QuickSight</dt>
+		<dd>Amazon Business Intelligence Tools</dd>
+		<dt>Data Pipeline</dt>
+		<dd>way to move your data between different AWS services</dd>
+		<dt>Glue</dt>
+		<dd>used for ETL (extract, transform, load)</dd>
 	</dl>
+<h2>Security &amp; Identity &amp; Compliance</h2>
+<<dl>
+	<dt>IAM - Identity Access Management</dt>
+	<dl>control users' access to AWS services</dl>
+	<dt>Cognito</dt>
+	<dd>lets you add user sign-up, sign-in and access control to your web and mobile apps quickly and easily</dd>
+	<dt>GuardDuty</dt>
+	<dd>monitors for malicious activity in your AWS account</dd>
+	<dt>Inspector</dt>
+	<dd>agent that you install on your VMs and run test against your machines</dd>
+	<dt>Macie</dt>
+	<dd>Scans your S3 buckets for personal identifiable information such as social security, names, etc</dd>
+	<dt>Certificate Manager</dt>
+	<dd>SSL certificate</dd>
+	<dt>CloudHSM</dt>
+	<dd>hardware security modules to store encryption keys</dd>
+	<dt>Directory Service</dt>
+	<dd>integrating microsoft AD services with AWS services</dd>
+	<dt>WAF</dt>
+	<dd>Web application firewall that protects the application layer</dd>
+	<dt>Shield</dt>
+	<dd>DDOS mitigation</dd>
+	<dt>Artificat</dt>
+	<dd>reporting function for compliance</dd>
+</dl>
+<h2>Mobile Services</h2>
+<dl>
+	<dt>Mobile Hub</dt>
+	<dd>gives you the tools to rapidly configure and integrate the cloud backend your mobile app needs</dd>
+	<dt>Pinpoint</dt>
+	<dd>way to push out notification to your mobile users</dd>
+	<dt>AWS AppSync</dt>
+	<dd>automatically updates the data in web and mobile applications in real time and updates data for offline users as soon as they reconnect</dd>
+	<dt>Device Farm</dt>
+	<dd>testing your apps on real world devices</dd>
+	<dt>Mobile Analytics</dt>
+	<dd>analytics for mobile</dd>
+</dl>
+<h2>AR/VR</h2>	
+<dl>
+	<dt>Sumerian</dt>
+	<dd>lets you create and run VR, AR and 3D applications quickly and easily without requiring any specialized programming</dd>
+</dl>
+<h2>Application Integration</h2>
+<dl>
+	<dt>Step Functions</dt>
+	<dd>is a web service that enables you to coordinate the components of distributed applications and microservices using visual workflows</dd>
+	<dt>Amazon MQ</dt>
+	<dd>managed message broker service for Apache Active MQ that makes it easy to set up and operate message brokers in the cloud. Message brokers allow different software systems to communicate</dd>
+	<dt>SNS</dt>
+	<dd>Simple Notification Service</dd>
+	<dt>SQS</dt>
+	<dd>Simple Queue Service - fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems and serverless applications</dd>
+	<dt>SWF</dt>
+	<dd>Simple Workflow Service is a could workflow management application that gives developers tools to coordinate applications across multiple machines</dd>
+</dl>
+<h2>Customer Engagement</h2>
+<dl>
+	<dt>Connect</dt>
+	<dd>call center as a service</dd>
+	<dt>Simple Email Service</dt>
+	<dd>send large amounts of email</dd>
+</dl>
+<h2>Business Productivity</h2>
+<dl>
+	<dt>Alexa for Business</dt>
+	<dt>Chime</dt>
+	<dl>video conferencing</dl>
+	<dt>Work Docs</dt>
+	<dd>kind of like dropbox for AWS</dd>
+	<dt>WorkMail</dt>
+	<dd>kind of like office 365/gmail</dd>
+</dl>
+<h2>Desktop &amp; App Streaming</h2>
+<dl>
+	<dt>Workspace</dt>
+	<dd>VDI</dd>
+	<dt>AppStream 2.0</dt>
+	<dd>way of streaming application to your device (kind of like citrix)</dd>
+</dl>
+<h2>IOT</h2>
+<dl>
+	<dt>IOT/IOT Device Management</dt>
+	<dt>Amazon FreeRTOS</dt>
+	<dd>OS for microcontrollers that makes small lowe-power edge devices easy to program.</dd>
+	<dt>Greengrass</dt>
+	<dd>is a software that lets you run local computer, messaging, data caching, sync for connected devices in a secure way</dd>
 
-
-
-
+</dl>
+<h2>Game Development</h2>
+<p>Game Lift</p>
 </body>
 </html>
