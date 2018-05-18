@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Security Groups</title>
+</head>
+<body>
+
+<div>
+	<h2>Security Group</h2>
+	<p>A Security group is a virtual firewall</p>
+	<ul>
+		<li>You can have multiple security groups attached to EC2 instances</li>
+		<li>You can have any number of EC2 instances within a security group</li>
+		<li>Any rules you change in the security group takes in effect immediately</li>
+		<li>Any inbound Traffic is blocked by default</li>
+		<li>All Outbound Traffic is Allowed by default</li>
+		<li>Security groups are STATEFUL - If you create an inbound rule allowing traffic in, that traffic is automatically allowed back out again</li>
+		<li>You cannot block specific IP addresses using Security Groups, instead use Network Access Control Lists</li>
+		<li>You can specify allow rules, but not deny rules</li>
+
+	</ul>
+</body>
+</html>

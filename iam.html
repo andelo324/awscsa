@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IAM</title>
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+<h2>What is IAM?</h2>
+<p>Essentially, IAM allows you to manage users and their level of access to the AWS Console. It is important to understand IAM and how it works, both for the exam and for administrating a company's AWS account int real life</p>
+<p>IAM does not require a region selection. It is global</p> 
+
+<h2>What does IAM give you</h2>
+<ul>
+	<li>Centralized control of your AWS account</li>
+	<li>Shared Access to your AWS account</li>
+	<li>Granular Permissions</li>
+	<li>Identity Federation (including Active Directory, Facebook, Linkedin etc)</li>
+	<li>Multifactor Authentication</li>
+	<li>Provide temporary access for users/devices and services where necessary</li>
+	<li>Allows you to set up your own password rotation policy</li>
+	<li>Integrates with many different AWS services</li>
+	<li>Suuports PCI/DSI Compliance</li>
+</ul>
+
+<h2>Critial Terms:</h2>
+<ul>
+	<li>Users - End Users</li>
+	<li>Groups - A collection of users under one set of permissions</li>
+	<li>Roles - You create roles and can then assign them to AWS resources</li>
+	<li>Policies - A document that defines one or more permissions</li>
+</ul>
+
+<p>When you Add a user in IAM, there are 2 AWS access types</p>
+<dl>
+	<dt>Programmatic access</dt>
+	<dd>Enables an <strong>access key ID</strong> and <strong>secret access key</strong> for the AWS API, CLI, SDK, and other development tools.</dd>
+	<dt>AWS Management Console access</dt>
+	<dd>Enables a <strong>password</strong> that allows users to sign-in to the AWS Management Console</dd>
+</dl>
+<h2>Recap of IAM</h2>
+<ul>
+	<li>IAM Consist of the following:</li>
+	<ul>
+		<li>Users</li>
+		<li>Groups (A way to group our users and apply polices to them collectively)</li>
+		<li>Roles</li>
+		<li>Policy Documents (Can apply to Users/Groups/Roles</li>
+	</ul>
+	<li>IAM is universal. It does not apply to regions at this time</li>
+	<li>The "root account" is simply the account created when first setup your AWS account. It has complete Admin access</li>
+	<li>New Users have NO permissions when first created</li>
+	<li>New Users are assigned <strong>Access Key ID &amp; Secret Access Keys</strong> when first created.</li>
+	<li>These are not the same as password and you cannot use the Access key ID &amp; Secret Access Key to Login in to the console. You can use this access AWS via the APIs and Command Line however</li>
+	<li>You only get to view these once. If you lose them you have to regenerate them. So save them in a secure location</li>
+	<li>Always setup Multifactor Authentication on your root account</li>
+	<li>You can create and customize your own password rotation policies</li>
+	
+</ul>
+</body>
+</html>

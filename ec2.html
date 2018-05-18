@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EC2 101</title>
+</head>
+<body>
+
+<div>
+	<h1>What is EC2</h1>
+	<p>Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. Amazon EC2 reduces the time required to obtain and boot new server instances to minutes, allowing you to quickly scale capacity, both up and down, as your computing requirements change.</p>
+	<p>Amazon EC2 changes the economics of computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools to build failure resilient applications and isolate themselves from common failure scenarios</p>
+</div>
+
+<div>
+	<h2>EC2 Options</h2>
+	<ul>
+		<li>On Demand - allow you to pay a fixed fate by the hour (or by the second) with no commitment.</li>
+		<li>Reserved - provide you with a capacity reservation, and offer a significant discount on the hourly charge for an instance. 1 Year or 3 Year Terms</li>
+		<li>Spot - enable you to bid whatever price you want for instance capacity, providing for even greater savings if your applications have flexible start and end times</li>
+		<li>Dedicated Hosts - Physical EC2 server dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound software licenses</li>
+	</ul>
+</div>
+
+<div>
+	<h2>Different Use Case Scenario - On Demand</h2>
+	<ul>
+		<li>Users that want the low cost and flexibility of Amazon EC2 without any up-front payment or long-term commitment</li>
+		<li>Applications with short term, spiky, or unpredictable workloads that cannot be interrupted</li>
+		<li>Applications being developed or tested on Amazon EC2 for the first time</li>
+	</ul>
+</div>
+
+<div>
+	<h2>Different Use Case Scenario - On Demand</h2>
+	<ul>
+		<li>Applications with steady state or predictable usage</li>
+		<li>Applications that require reserved capacity</li>
+		<li>Users able to make upfront payments to reduce their total computing costs even further</li>
+		<ul>
+			<li>Standard Reserver Instance's (Up to 75% off on demand)</li>
+			<li>Convertible RI's (Up to 54% off on demand) capability to change the attributes of the RI as long as the exchange results in the creation of Reserved Instances of equal or greater value</li>
+			<li>Scheduled RI's available to launch within the time windows you reserve. This option allows you to match your capacity reservation to a predictable recurring schedule that only requires a fraction of day, a week or a month.</li>
+		</ul>
+	</ul>
+</div>
+
+<div>
+	<h2>Different Use Case Scenario - Spot</h2>
+	<ul>
+		<li>Applications that have flexible start and end times</li>
+		<li>Applications that are only feasible at very low compute prices</li>
+		<li>Users with urgent computing needs for large amounts of additional capacity</li>
+	</ul>
+</div>
+
+<div>
+	<h2>Different Use Case Scenario - Dedicated Hosts</h2>
+	<ul>
+		<li>Useful for regulatory requirements that may not support multi-tenant virtualization</li>
+		<li>Great for licensing which does not support multi-tenancy or cloud deployments</li>
+		<li>Can be purchased On-Demand (hourly)</li>
+		<li>Can be purchased as a Reservation for up to 70% off the On-Demand Price</li>
+	</ul>
+</div>
+
+<div>
+	<h2>EC2 INstance Types</h2>
+	<img src="images/ec2instance.png">
+</div>
+<div>
+	<h2>Anagram for EC2 Instance Types</h2>
+	<p>DR Mc Gift PX</p>
+	<ul>
+			<li><strong>D</strong> for Density</li>
+			<li><strong>R</strong> for RAM</li>
+			<li><strong>M</strong> for Main choice for general purpose</li>
+			<li><strong>C</strong> for Compute</li>
+			<li><strong>G</strong> for Graphics</li>
+			<li><strong>I</strong> for IOPS</li>
+			<li><strong>F</strong> for FPGA</li>
+			<li><strong>T</strong> for cheap general purpose</li>
+			<li><strong>P</strong> for Graphics</li>
+			<li><strong>X</strong> for Extreme Memory</li>
+	</ul>
+</div>
+
+<div>
+	<h2>What is EBS</h2>
+	<p>Amazon EBS allows you to create storage volumes and attach them to Amazon EC2 instances. Once attached, you can create a file system on top of these volumes, run a database, or use them in any other way you would use a block device. Amazon EBS volumes are places in a specific Availability Zone, where they are automatically replicated to protect you from the failure of a single component</p>
+</div>
+<div>
+	<h2>EBS Volume Types</h2>
+	<ul>
+		<li>General Purpose SSD (GP2)</li>
+		<ul>
+			<li>General purpose, balances both price and performance</li>
+			<li>Ratio of 3 IOPS per GB with up to 10,000 IOPS and the ability to burst up to 3000 IOPS for extended periods of time for volume at 3334GB and above</li>
+		</ul>
+		<li>Provisioned IOPS (IO1)</li>
+		<ul>
+			<li>Designed for I/O intensive applications such as large relational or NoSQL databases</li>
+			<li>Use if you need more than 10,000 IOPS</li>
+			<li>Can provision up to 20,000 IOPS per volume</li>
+		</ul>
+		<li>Throughput Optimized HDD (ST1)</li>
+		<ul>
+			<li>Big data</li>
+			<li>Data warehouses</li>
+			<li>Log Processing</li>
+			<li>Cannot be a boot volume</li>		
+		</ul>
+		<li>Cold HDD (SC1)</li>
+		<ul>
+			<li>Lowest Cost Storage for infrequently accessed workloads</li>
+			<li>File Server</li>
+			<li>Cannot be a boot volume</li>
+		</ul>
+		<li>Magnetic (Standard)</li>
+		<ul>
+			<li>Lowest cost per gigabyte of all EBS volume types that is bootable. Magnetic volumes are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important</li>
+		</ul>
+	</ul>	
+	<div>
+		<h2>EC2 Exam Tips</h2>
+		<ul>
+			<li>Know the differences between</li>
+			<ul>
+				<li>On Demand</li>
+				<li>Spot</li>
+				<li>Reserved</li>
+				<li>Dedicated Hosts</li>
+			</ul>
+			<li>Remember with spot instances</li>
+			<ul>
+				<li>If you terminate the instance, you pay for the hour</li>
+				<li>If AWS terminates the spot instance, you get the hour it was terminated in for free</li>
+			</ul>
+			<li>EBS Consists of:</li>
+			<ul>
+				<li>SSD, General Purpose - GP2 - (Up to 10,000 IOPS)</li>
+				<li>SSD, Provisioned IOPS - IO1 - (More than 10,000 IOPS)</li>
+				<li>HDD, Throughput Optimized - ST1 - frequently accessed workloads (can't be a boot volume)</li>
+				<li>HDD, Cold - SC1 - less frequently accessed data (can't be a boot volume)</li>
+				<li>HDD, Magnetic - Standard - cheap, infrequently accessed storage (can be boot volume)</li>
+			</ul>
+			<li>You cannot mount 1 EBS volume to multiple EC2 instances, instead use EFS</li>
+			<li>Remember the different EC2 Instance Type</li>
+			<ul>
+				<li>DR MC GIFT PX   (Density, RAM, Main Choice, Compute, Graphics, IOPS, FPGA, Cheap, Graphics, Extreme Memory)</li>
+			</ul>
+			<li>Termination Protection is turned off by default. You must turn it on</li>
+			<li>On an EBS-backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated.</li>
+			<li>EBS Root Volumes of your DEFAULT AMI's cannot be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be done when creating AMI's in the AWS console or using the API</li>
+			<li>Additional volumes can be encrypted</li>
+		</ul>
+</body>
+</html>

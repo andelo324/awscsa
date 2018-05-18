@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EBS Volumes</title>
+</head>
+<body>
+<div>
+	<h1>EBS Volumes</h1>
+</div>
+<div>
+	<h2>Volumes &amp; Snapshots</h2>
+	<ul>
+		<li>Volumes that exist on EBS:</li>
+		<ul>
+			<li>Virtual Hard Disk</li>
+		</ul>
+				<li>Snapshots exist on S3</li>
+				<li>Snapshots are point in time copies of Volumes</li>
+				<li>Snapshots are incremental - this means that only the blocks that have changed since your last snapshot are moved to S3</li>
+				<li>If this is your first snapshot, it may take some time to create</li>
+		 </ul>
+</div>
+<div>
+	<h2>Snapshots of Root Device Volumes</h2>
+		<ul>
+			<li>To create a snapshot for Amazon EBS volumes that serve as root devices, you should stop the instance before taking the snapshot</li>
+			<li>However you can take a snapshot while the instance is running</li>
+			<li>You can create AMI's from both Volumes and Snapshots</li>
+			<li>You can change EBS volume sizes on the fly, including changing the size and storage type</li>
+			<li>Volumes will ALWAYS be in the same AZ as the EC2 instance</li>
+			<li>To move an EC2 volume from one AZ/Region to another, take a snap or an image of it, then copy it to the new AZ/Region</li>
+		</ul>
+</div>
+<div>
+	<h2>Volumes vs Snapshots - Security</h2>
+		<ul>
+			<li>Snapshots of encrypted volumes are encrypted automatically</li>
+			<li>To Create a snapshot for Amazon EBS volumes that servce as root devices, you should stop the instance before taking the snapshot</li>
+			<li>Volumes restored from encrypted snapshots are encrypted automatically</li>
+			<li>You can share snapshots, but only if they are unencrypted</li>
+			<ul>
+				<li>These snapshots can be shared with other AWS accounts or made public</li>
+			</ul>
+		</ul>
+</div>
+</body>
+</html>

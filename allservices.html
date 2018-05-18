@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AWS Platform Services Part1</title>
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+		<h1>The AWS Platform - The 10,000 Foot Overview</h1><hr />
+<div>
+<table>
+	<tr>
+		<td class="fixedPercent"></td>
+		<td class="fixedPercent">Game Development</td>
+		<td class="fixedPercent"></td>
+	</tr>
+	<tr>
+		<td class="fixedPercent">Business Productivity</td>
+		<td class="fixedPercent">Desktop &amp; App Streaming</td>
+		<td class="fixedPercent">IOT</td>
+	</tr>
+	<tr>
+		<td class="fixedPercent">AR/VR</td>
+		<td class="fixedPercent">Application Integration</td>
+		<td class="fixedPercent">Customer Engagement</td>
+	</tr>
+	<tr>
+		<td class="fixedPercent">Analytics</td>
+		<td class="fixedPercent">Security &amp; Identity &amp; Compliance</td>
+		<td class="fixedPercent">Mobile Services</td>
+	</tr>
+	<tr>
+		<td class="fixedPercent">Management Tools</td>
+		<td class="fixedPercent">Media Services</td>
+		<td class="fixedPercent">Machine Learning</td>
+	</tr>
+	<tr>
+		<td class="fixedPercent">Migration</td>
+		<td class="fixedPercent">Networking &amp; Content Delivery</td>
+		<td class="fixedPercent">Developer Tools</td>
+	</tr>
+
+	<tr>
+		<td class="fixedPercent">Compute</td>
+		<td class="fixedPercent">Storage</td>
+		<td class="fixedPercent">Databases</td>
+	</tr>
+
+	<tr>
+		<td colspan="3" class="overAll">AWS Global Infrastructure</td>
+	</tr>
+</table>
+<div>
+	<h2>Compute</h2>
+	<dl>
+		<dt>EC2</dt>
+		<dd>Elastic Compute - Virtual Machines</dd>
+		<dt>EC2 Container Services</dt>
+		<dd>a container management service that suports Docker containers</dd>
+		<dt>Elastic Beanstalk</dt>
+		<dd>orchestration service that automatically handles the details of capacity provisioning, load balancing, scaling and application health monitoring</dd>
+		<dt>Lambda</dt>
+		<dd>It is a compute service that runs code in response to events and automatically manages the compute resources required by that code</dd>
+		<dt>Lightsail</dt>
+		<dd>Amazon's VPS service</dd>
+	</dl>
+</div>
+<div>
+	<h2>Storage</h2>
+	<dl>
+		<dt>S3</dt>
+		<dd>known as Simple Service Storage - object based storage (buckets)</dd>
+		<dt>EFS</dt>
+		<dd>known as Elastic File service - esentially network attached storage where you can mount this to multiple machines</dd>
+		<dt>Glacier</dt>
+		<dd>archival storage</dd>
+		<dt>Snowball</dt>
+		<dd>Way to bring in large amounts of data to AWS using physical disk and ship it to AWS</dd>
+		<dt>Storage Gateway</dt>
+		<dd>Essentially virtual appliances you install in your datacenter or head office and then will replicate data back to S3. 4 Different types of Storage Gateway</dd>
+	</dl>
+	<h2>Database</h2>
+	<dl>
+		<dt>RDS</dt>
+		<dd>Databases such as MySql, MSSQL, Postgres, Oracle</dd>
+		<dt>DynamoDB</dt>
+		<dd>Non-Relational Database</dd>
+		<dt>Elasticache</dt>
+		<dd>Caching top queried things from db</dd>
+		<dt>Red Shift</dt>
+		<dd>used for Data Warehousing or Business Intelligence</dd>
+	</dl>
+	<h2>Migration</h2>
+	<dl>
+		<dt>AWS Migration Hub</dt>
+		<dd>Tracking service as it tracks during migration</dd>
+		<dt>Application Discovery Service</dt>
+		<dd>Automated set of tools that detects what applications you have and its dependencies</dd>
+		<dt>Database Migration Service</dt>
+		<dd>Migrate on-prem database to AWS</dd>
+		<dt>Server Migration Service</dt>
+		<dd>migrates your VM and physical servers to AWS</dd>
+		<dt>Snowball</dt>
+		<dd>migrates large amount of data using an appliance</dd>
+	</dl>
+	<h2>Network &amp; Content Delivery</h2>
+	<dl>
+		<dt>VPC</dt>
+		<dd>Amazon's virtual private cloud</dd>
+		<dt>CloudFront</dt>
+		<dd>Amazon's Content Delivery Network</dd>
+		<dt>Route 53</dt>
+		<dd>Amazon's DNS services</dd>
+		<dt>API Gateway</dt>
+		<dd>way to create your own API to talk to AWS</dd>
+		<dt>Direct Connect</dt>
+		<dd>Way of running a deicated line from datacenter to AWS</dd>
+	</dl>
+	<h2>Developer Tools (won't be on test)</h2>
+	<dl>
+		<dt>Codestar</dt>
+		<dd>collaboration on code</dd>
+		<dt>CodeCommit</dt>
+		<dd>Place to store code</dd>
+		<dt>CodeBuild</dt>
+		<dd>Will compile and test against your code</dd>
+		<dt>CodeDeploy</dt>
+		<dd>Automates application deployments to any EC2 instance </dd>
+		<dt>CodePipeline</dt>
+		<dd>Continuous delivery service - Automate, visualize your deployment</dd>
+		<dt>X-Ray</dt>
+		<dd>debug and analyze serverless apps</dd>
+		<dt>Cloud9</dt>
+		<dd>IDE</dd>
+	</dl>
+	<h2>Management Tools</h2>
+	<dl>
+		<dt>CloudWatch</dt>
+		<dd>Monitoring Service</dd>
+		<dt>CloudFormation</dt>
+		<dd>way to scripting infrastructure on AWS</dd>
+		<dt>CloudTrail</dt>
+		<dd>Logging for all activities in the Management console</dd>
+		<dt>Config</dt>
+		<dd>Monitorings all the configs in your AWS environment</dd>
+		<dt>OpsWorks</dt>
+		<dd>Uses chef and puppet to automate your environment</dd>
+		<dt>Service Catalog</dt>
+		<dd>Manage a catalog of IT services that's approved for use in your environment</dd>
+		<dt>Systems Manager</dt>
+		<dd>basically an interface for managing your AWS resources</dd>
+		<dt>Trusted Advisor</dt>
+		<dd>gives advice on all aspects of your environment</dd>
+		<dt>Managed Services</dt>
+		<dd></dd>
+	</dl>
+	<h2>Media Services</h2>
+	<dl>
+		<dt>Elastic Transcode (not on exam)</dt>
+		<dd>transcodes media to appropriate devices such as iphones, androids, etc</dd>
+		<dt>MediaConvert</dt>
+		<dd>file based video transcoder for broadcast</dd>
+		<dt>MediaLive</dt>
+		<dd>Live video processing service</dd>
+		<dt>MediaPackage</dt>
+		<dd>prepares and protects videos over internet</dd>
+		<dt>MediaStore</dt>
+		<dd>Storage for video - optimized to deliver video content</dd>
+		<dt>MediaTailor</dt>
+		<dd>allows you to do targeted advertisement</dd>
+	</dl>
+	<h2>Machine Learning (not on exam)</h2>
+	<dl>
+		<dt>Sage Maker</dt>
+		<dd>fully managed machine learning service</dd>
+		<dt>Comprehend</dt>
+		<dd>uses natural language processing to extract insights about the content of documents</dd>
+		<dt>Deep Lens</dt>
+		<dd>wireless video camera and API. It shows you how to use the latest AI tools to develop computer vision applications</dd>
+		<dt>Lex</dt>
+		<dd>what powers the Alexa service</dd>
+		<dt>Machine Learning</dt>
+		<dd>entry level machine learning</dd>
+		<dt>Polly</dt>
+		<dd>Takes text and turns it into speech</dd>
+		<dt>Rekognition</dt>
+		<dd>it'll tell you what's on the file you upload whether it's a picture or a video</dd>
+		<dt>Amazon Translate</dt>
+		<dd>Amazon's version of translation</dd>
+		<dt>Amazon Transcribe</dt>
+		<dd>automatice speech recognition</dd>
+	</dl>
+	<h2>Analytics</h2>
+	<dl>
+		<dt>Athena</dt>
+		<dd>Allows you to run a sql-query on things in your S3 bucket</dd>
+		<dt>EMR - Elastic Map Reduce</dt>
+		<dd>Processing large amounts of data</dd>
+		<dt>CloudSearch/ElasticSearch Service</dt>
+		<dd>Search service</dd>
+		<dt>Kinesis</dt>
+		<dd>service that collects and process large streams of data records in real time</dd>
+		<dt>Kinesis Video Streams</dt>
+		<dd>service that collects and process large streams of video</dd>
+		<dt>QuickSight</dt>
+		<dd>Amazon Business Intelligence Tools</dd>
+		<dt>Data Pipeline</dt>
+		<dd>way to move your data between different AWS services</dd>
+		<dt>Glue</dt>
+		<dd>used for ETL (extract, transform, load)</dd>
+	</dl>
+<h2>Security &amp; Identity &amp; Compliance</h2>
+<<dl>
+	<dt>IAM - Identity Access Management</dt>
+	<dl>control users' access to AWS services</dl>
+	<dt>Cognito</dt>
+	<dd>lets you add user sign-up, sign-in and access control to your web and mobile apps quickly and easily</dd>
+	<dt>GuardDuty</dt>
+	<dd>monitors for malicious activity in your AWS account</dd>
+	<dt>Inspector</dt>
+	<dd>agent that you install on your VMs and run test against your machines</dd>
+	<dt>Macie</dt>
+	<dd>Scans your S3 buckets for personal identifiable information such as social security, names, etc</dd>
+	<dt>Certificate Manager</dt>
+	<dd>SSL certificate</dd>
+	<dt>CloudHSM</dt>
+	<dd>hardware security modules to store encryption keys</dd>
+	<dt>Directory Service</dt>
+	<dd>integrating microsoft AD services with AWS services</dd>
+	<dt>WAF</dt>
+	<dd>Web application firewall that protects the application layer</dd>
+	<dt>Shield</dt>
+	<dd>DDOS mitigation</dd>
+	<dt>Artificat</dt>
+	<dd>reporting function for compliance</dd>
+</dl>
+<h2>Mobile Services</h2>
+<dl>
+	<dt>Mobile Hub</dt>
+	<dd>gives you the tools to rapidly configure and integrate the cloud backend your mobile app needs</dd>
+	<dt>Pinpoint</dt>
+	<dd>way to push out notification to your mobile users</dd>
+	<dt>AWS AppSync</dt>
+	<dd>automatically updates the data in web and mobile applications in real time and updates data for offline users as soon as they reconnect</dd>
+	<dt>Device Farm</dt>
+	<dd>testing your apps on real world devices</dd>
+	<dt>Mobile Analytics</dt>
+	<dd>analytics for mobile</dd>
+</dl>
+<h2>AR/VR</h2>	
+<dl>
+	<dt>Sumerian</dt>
+	<dd>lets you create and run VR, AR and 3D applications quickly and easily without requiring any specialized programming</dd>
+</dl>
+<h2>Application Integration</h2>
+<dl>
+	<dt>Step Functions</dt>
+	<dd>is a web service that enables you to coordinate the components of distributed applications and microservices using visual workflows</dd>
+	<dt>Amazon MQ</dt>
+	<dd>managed message broker service for Apache Active MQ that makes it easy to set up and operate message brokers in the cloud. Message brokers allow different software systems to communicate</dd>
+	<dt>SNS</dt>
+	<dd>Simple Notification Service</dd>
+	<dt>SQS</dt>
+	<dd>Simple Queue Service - fully managed message queuing service that makes it easy to decouple and scale microservices, distributed systems and serverless applications</dd>
+	<dt>SWF</dt>
+	<dd>Simple Workflow Service is a could workflow management application that gives developers tools to coordinate applications across multiple machines</dd>
+</dl>
+<h2>Customer Engagement</h2>
+<dl>
+	<dt>Connect</dt>
+	<dd>call center as a service</dd>
+	<dt>Simple Email Service</dt>
+	<dd>send large amounts of email</dd>
+</dl>
+<h2>Business Productivity</h2>
+<dl>
+	<dt>Alexa for Business</dt>
+	<dt>Chime</dt>
+	<dl>video conferencing</dl>
+	<dt>Work Docs</dt>
+	<dd>kind of like dropbox for AWS</dd>
+	<dt>WorkMail</dt>
+	<dd>kind of like office 365/gmail</dd>
+</dl>
+<h2>Desktop &amp; App Streaming</h2>
+<dl>
+	<dt>Workspace</dt>
+	<dd>VDI</dd>
+	<dt>AppStream 2.0</dt>
+	<dd>way of streaming application to your device (kind of like citrix)</dd>
+</dl>
+<h2>IOT</h2>
+<dl>
+	<dt>IOT/IOT Device Management</dt>
+	<dt>Amazon FreeRTOS</dt>
+	<dd>OS for microcontrollers that makes small lowe-power edge devices easy to program.</dd>
+	<dt>Greengrass</dt>
+	<dd>is a software that lets you run local computer, messaging, data caching, sync for connected devices in a secure way</dd>
+
+</dl>
+<h2>Game Development</h2>
+<p>Game Lift</p>
+</body>
+</html>

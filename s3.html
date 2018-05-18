@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S3 Basics</title>
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+<h2>What is S3?</h2>
+<p>S3 provides developers and IT teams with secure, durable, highly-scalable object storage. Amazon S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web</p>
+<p>S3 is a safe place to store your files. It is Object based storage(Flat Files such as documents, pdfs, videos, etc). The data is spread across multiple devies and facilities. Designed to withstand failures</p>
+<h2> S3 - The Basics</h2>
+<ul>
+	<li>S3 is Object based i.e. allows you to upload files</li>
+	<li>Files can be from 0 Bytes to 5TB.</li>
+	<li>There is unlimited storage</li>
+	<li>Files are stored in Buckets (Think of a folder)</li>
+	<li>S3 is a universal namespace, that is, Bucket names must be unique globally</li>
+	<li>When you create a bucket, it creates a unique dns address (https://s3-<strong>region-name</strong>.amazonaws.com/<strong>nameOfBucket</strong></li>
+	<li>When you upload a file to S3 you will receive a HTTP 200 code if the upload was successful</li>
+	<li>Built for 99.99% availability for the S3 platform</li>
+	<li>Amazon Guarantee 99.9% availability</li>
+	<li>Amazon guarantees 99.999999999% durability for S3 information. (11 9's)</li>
+	<li>Tiered Storage Available</li>
+	<li>LifeCycle Management</li>
+	<li>Versioning</li>
+	<li>Encryption</li>
+	<li>Secure your data using Access Control Lists and Bucket Policies</li>
+</ul>
+<h2>Data Consistency Model For S3</h2>
+<ul>
+	<li>Read after Write consistency for PUTS of new Objects (brand new upload of files can be read almost immediately)</li>
+	<li>Eventual Consistency for overwrite PUTS and DELETES (when you update a file or delete a file, it can take some time for the changes to propagate because it has to make the change across multiple devices and facilities) The data you get is considered "atomic". Either you get the old data or new data. Nothing in-between</li>
+	<li></li>
+</ul>
+<h2>S3 - S3 is a simple key, value store</h2>
+<ul>
+	<li>S3 is Object based. Objects consist of the following;</li>
+	<ul>
+		<li>Key (This is simply the name of the object/filename)</li>
+		<li>Value (This is simple the data and is made up of a sequence of bytes/literally the data)</li>
+		<li>Version ID (Important for versioning)</li>
+		<li>Metadata (Data about the data you are storing)</li>
+		<li>Subresources (Consist of two things: Access Control List, Torrent)</li>
+	</ul>
+</ul>
+<h2>S3 - Storage Tiers/Classes</h2>
+<img src="images/S3StorageTiers.png">
+<ul>
+	<li>S3 - 99.99% availability, 99.999999999% durability, stored redudantly across multiple facilities and is designed to sustain the loss of 2 facilities concurrently</li>
+	<li>S3 - IA (Infrequently Accessed) For data that is accessed less frequently, but required rapid access when needed. Lower fee than S3, but you are charged a retrieval free</li>
+	<li>RRS - Reduced Redundancy Storage - Designed to provide 99.99% durability and 99.99% availability of objects over a given year</li>
+	<li>Glacier - Very cheap but used for archival only. It takes 3-5 hours to restore from Glacier</li>
+	<li>Glacier is an extremely low-cost storage service for data archival. Amazon Glacier stores data for as little as $0.0.1 per gigabyte per month, and is optimized for data that is infrequently accessed and for which retrieval times of 3 to 5 hours are suitable</li>
+</ul>
+<img src="images/s3vsglacier.png">
+<h2>S3 - Charges</h2>
+<ul>
+	<li>Charged for;</li>
+	<ul>
+		<li>Storage</li>
+		<li>Requests</li>
+		<li>Storage Management Pricing</li>
+		<li>Data Transfer Pricing (Into is free but moving data around in S3 is charged)</li>
+		<li>Transfer Acceleration - enables fast, easy and secure transfers of files over long distances between your end users and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront's globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path</li>
+	</ul>
+</ul>
+
+<h2>S3 Exam Tips</h2>
+<ul>
+	<li>Remeber that S3 is Object based i.e. allows you to upload files.</li>
+	<li>Files can be from 0 Bytes to 5Tb</li>
+	<li>There is unlimited storage</li>
+	<li>Files are stored in Buckets(folders)</li>
+	<li>S3 is a universal namespace, that is, names must be unique</li>
+	<li>Read after Write consistency for PUTS of new Objects</li>
+	<li>Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate)</li>
+	<li>S3 Storage Classes/Tiers</li>
+	<ul>
+		<li>S3 (durable, immediately available, frequently accessed)</li>
+		<li>S3 - IA (durable, immediately available, infrequently accessed)</li>
+		<li>S3 - Reduced Redundancy Storage (data that is easily reproducible such as thumbnails, etc)</li>
+		<li>Glacier - Archived data, where you can wait 3-5 hours before accessing.</li>
+	</ul>
+	<li>Remember the core fundamentals of an S3 object;</li>
+	<ul>
+		<li>Key (name)</li>
+		<li>Value (data)</li>
+		<li>Version ID</li>
+		<li>Metadata</li>
+		<li>Subresources</li>
+		<ul>
+			<li>ACL</li>
+			<li>Torrent</li>
+		</ul>
+	</ul>
+	<li>Object based storage only (for files)</li>
+	<li>Not suitable to install on OS on</li>
+	<li>Successful uploads will generate a HTTP 200 status code</li>
+	<li>Read the S3 FAQ before taking the exam</li>
+</ul>
+<h2>S3 - Versioning Exam Tips</h2>
+<ul>
+	<li>Stores all version of an object (including all writes and even if you delete an object)</li>
+	<li>Great backup tool</li>
+	<li>Once versioning is enabled, You cannot disable it. Only suspend it</li>
+	<li>Integrates with Lifecycle rules</li>
+	<li>Versioning's MultiFactor Authentication (MFA) Delete capability, which uses multi-factor authentication, can be used to provide an additional layer of security</li>
+</ul>
+	
+</body>
+</html>

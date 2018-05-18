@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>S3 - Security &amp; Encryption</title>
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body>
+
+	<h2>Securing your buckets</h2>
+	<ul>
+		<li>By default, all newly created buckets are PRIVATE</li>
+		<li>You can setup access control to your buckets using;</li>
+		<ul>
+			<li>Bucket Policies</li>
+			<li>Access Control Lists</li>
+		</ul>
+		<li>S3 buckets can be configured to create access logs which log all request made to the S3 bucket. This can be done to another bucket</li>
+	</ul>
+	<h2>4 Types of Encryption</h2>
+	<ul>
+		<li>Data In Transit - Simply you're sending information from your pc to your bucket</li>
+		<ul>
+			<li>SSL/TLS</li>
+		</ul>
+		<li>Data At Rest</li>
+		<ul>
+			<li>Server Side Encrytion</li>
+			<ul>
+				<li>S3 Managed Keys - SSE-S3</li>
+				<li>AWS Key Management Service, Managed Keys - SSE-KMS (Key Managed Service). Provides you with audit trail when keys are used</li>
+				<li>Service Side Encryption with Customer Provided Keys - SSE-C</li>
+			</ul>
+		</ul>
+		<li>Client Side Encryption</li>
+	</ul>
+
+
+</body>
+</html>
